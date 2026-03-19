@@ -1,0 +1,25 @@
+{
+  "name": "chai-tailwind",
+  "version": "1.0.1",
+  "description": "A package that you can use to build mordern website, just like tailwind, But you shouldn't since tailwind is already there, It was just a fun project to learn dom.",
+  "main": "dist/chai-tailwind.js",
+  "unpkg": "dist/chai-tailwind.js",
+  "jsdelivr": "dist/chai-tailwind.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "esbuild src/index.js --bundle --minify --outfile=dist/chai-tailwind.js --format=iife"
+  },
+  "keywords": [
+    "tailwind",
+    "css",
+    "utility",
+    "mini"
+  ],
+  "author": "Mohammad Saif",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.27.4"
+  }
+}
