@@ -201,7 +201,9 @@ window.ChaiTailwind.init();
 | `chai-opacity-75` | `opacity: 0.75` |
 | `chai-opacity-100` | `opacity: 1` |
 
-## License
 <hr/>
-ISC © Mohammad Saif
+
+## License
+
+Copyright © 2026 Mohammad Saif
 
