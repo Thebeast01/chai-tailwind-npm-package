@@ -80,13 +80,14 @@
         "chai-opacity-100": { opacity: "1" },
     };
     function applyCustomClasses(element) {
-        const classList = element.className.trim().split(/\s+/);
+        "chai-opacity-100"
+        const classList = element.className.split(" ");
+        ["chai-opacity-100", "chai-opacity-75"]
         classList.forEach(cls => {
             const style = chaiClasses[cls]
             if (style) {
                 Object.assign(element.style, style)
             }
-
         }
         )
     }

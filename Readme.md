@@ -200,3 +200,8 @@ window.ChaiTailwind.init();
 | `chai-opacity-50` | `opacity: 0.5` |
 | `chai-opacity-75` | `opacity: 0.75` |
 | `chai-opacity-100` | `opacity: 1` |
+
+## License
+<hr/>
+ISC © Mohammad Saif
+
