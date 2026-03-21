@@ -1,5 +1,5 @@
 import {chaiHoverClasses} from '../constant/hoverClasses'
-function camelToKebab(str) {
+export  function camelToKebab(str) {
     return str.replace(/[A-Z]/g, m => "-" + m.toLowerCase());
 }
 export default function toUseHoverStyles() {

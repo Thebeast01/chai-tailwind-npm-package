@@ -1,4 +1,5 @@
 import {chaiClasses} from '../constant/classes.ts'
+import { camelToKebab } from './hoverStyles.js';
 export default function applyCustomClasses() {
     const style = document.createElement("style");
     let css = "";
