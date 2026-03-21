@@ -1,6 +1,6 @@
 # 🍵 Chai Tailwind
 
-A lightweight Tailwind-like utility CSS engine built using pure JavaScript.
+A lightweight Tailwind-like runtime CSS engine built using pure JavaScript.  
 Apply utility classes directly in HTML — no build step required.
 
 ---
@@ -9,8 +9,10 @@ Apply utility classes directly in HTML — no build step required.
 
 - ⚡ No build tools required
 - 🎯 Utility-first CSS approach
+- 🎬 Built-in animations (fade, slide, bounce, spin)
+- 🖱️ Hover utilities (scale, tilt, color, opacity)
+- 🧊 Interactive 3D tilt cards (mouse-based)
 - 📦 Works via CDN and npm
-- 🧠 Great for learning how Tailwind works internally
 - 🔌 Zero dependencies
 
 ---
@@ -26,7 +28,7 @@ npm install chai-tailwind
 ### Using CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/chai-tailwind@1.0.0/dist/chai-tailwind.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chai-tailwind@1.1.0/dist/chai-tailwind.js"></script>
 ```
 
 ---
@@ -39,7 +41,7 @@ npm install chai-tailwind
 import "chai-tailwind";
 ```
 
-> 👉 That's it. The library automatically scans the DOM and applies styles.
+Automatically initializes and applies styles.
 
 ### 🔹 Using CDN
 
@@ -47,7 +49,7 @@ import "chai-tailwind";
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/chai-tailwind@1.0.0/dist/chai-tailwind.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chai-tailwind@1.1.0/dist/chai-tailwind.js"></script>
 </head>
 <body>
   <div class="chai-bg-red chai-text-white chai-p-4">
@@ -59,21 +61,9 @@ import "chai-tailwind";
 
 ---
 
-## ⚙️ API
-
-### `window.ChaiTailwind.init()`
-
-Re-apply styles manually (useful for dynamically added elements):
-
-```js
-window.ChaiTailwind.init();
-```
-
----
-
 ## 🎨 Utility Classes
 
-### 🎯 Background Colors
+###  Background Colors
 
 | Class | CSS |
 |---|---|
@@ -85,9 +75,7 @@ window.ChaiTailwind.init();
 | `chai-bg-white` | `background-color: #ffffff` |
 | `chai-bg-black` | `background-color: #000000` |
 
----
-
-### ✍️ Text & Typography
+###  Text & Typography
 
 | Class | CSS |
 |---|---|
@@ -101,9 +89,7 @@ window.ChaiTailwind.init();
 | `chai-font-bold` | `font-weight: bold` |
 | `chai-font-medium` | `font-weight: 500` |
 
----
-
-### 📦 Spacing
+###  Spacing
 
 | Class | CSS |
 |---|---|
@@ -117,9 +103,7 @@ window.ChaiTailwind.init();
 | `chai-m-4` | `margin: 16px` |
 | `chai-m-auto` | `margin: auto` |
 
----
-
-### 🔲 Borders & Radius
+###  Borders & Radius
 
 | Class | CSS |
 |---|---|
@@ -133,9 +117,7 @@ window.ChaiTailwind.init();
 | `chai-rounded-xl` | `border-radius: 16px` |
 | `chai-rounded-full` | `border-radius: 9999px` |
 
----
-
-### 📐 Layout & Flexbox
+###  Layout & Flexbox
 
 | Class | CSS |
 |---|---|
@@ -153,57 +135,83 @@ window.ChaiTailwind.init();
 | `chai-gap-2` | `gap: 8px` |
 | `chai-gap-4` | `gap: 16px` |
 
----
-
-### 📏 Sizing
+###  Effects & Misc
 
 | Class | CSS |
 |---|---|
-| `chai-w-full` | `width: 100%` |
-| `chai-w-screen` | `width: 100vw` |
-| `chai-w-fit` | `width: fit-content` |
-| `chai-h-full` | `height: 100%` |
-| `chai-h-screen` | `height: 100vh` |
-| `chai-max-w-sm` | `max-width: 640px` |
-| `chai-max-w-md` | `max-width: 768px` |
-| `chai-max-w-lg` | `max-width: 1024px` |
+| `chai-shadow-sm` | subtle shadow |
+| `chai-shadow-md` | medium shadow |
+| `chai-shadow-lg` | strong shadow |
+| `chai-transition` | smooth transition |
+| `chai-cursor-pointer` | pointer cursor |
+| `chai-text-center` | center text |
+| `chai-text-left` | left text |
+| `chai-text-right` | right text |
+| `chai-overflow-hidden` | hide overflow |
+| `chai-opacity-50` | 50% opacity |
+| `chai-opacity-75` | 75% opacity |
+| `chai-opacity-100` | 100% opacity |
 
 ---
 
-### 📍 Positioning
+##  Animations
 
-| Class | CSS |
+| Class | Effect |
 |---|---|
-| `chai-relative` | `position: relative` |
-| `chai-absolute` | `position: absolute` |
-| `chai-fixed` | `position: fixed` |
-| `chai-top-0` | `top: 0` |
-| `chai-left-0` | `left: 0` |
-| `chai-right-0` | `right: 0` |
-| `chai-bottom-0` | `bottom: 0` |
+| `chai-animate-fade-in` | fade in |
+| `chai-animate-slide-up` | slide from bottom |
+| `chai-animate-bounce` | bouncing |
+| `chai-animate-spin` | spinning |
 
 ---
 
-### 🎭 Effects & Misc
+##  Hover Utilities
 
-| Class | CSS |
+| Class | Effect |
 |---|---|
-| `chai-shadow-sm` | `box-shadow: small` |
-| `chai-shadow-md` | `box-shadow: medium` |
-| `chai-shadow-lg` | `box-shadow: large` |
-| `chai-transition` | `transition: all 0.3s ease` |
-| `chai-cursor-pointer` | `cursor: pointer` |
-| `chai-text-center` | `text-align: center` |
-| `chai-text-left` | `text-align: left` |
-| `chai-text-right` | `text-align: right` |
-| `chai-overflow-hidden` | `overflow: hidden` |
-| `chai-opacity-50` | `opacity: 0.5` |
-| `chai-opacity-75` | `opacity: 0.75` |
-| `chai-opacity-100` | `opacity: 1` |
+| `chai-hover-bg-red` | change bg on hover |
+| `chai-hover-bg-blue` | change bg on hover |
+| `chai-hover-scale` | scale up |
+| `chai-hover-opacity-75` | reduce opacity |
+| `chai-hover-tilt` | tilt right |
+| `chai-hover-tilt-left` | tilt left |
+| `chai-hover-tilt-3d` | 3D tilt effect |
 
-<hr/>
+---
 
-## License
+##  3D Tilt Cards (Mouse-Based)
 
-Copyright © 2026 Mohammad Saif
+Interactive tilt based on cursor position.
 
+```html
+<div class="chai-card chai-tilt-3d chai-bg-white chai-p-6 chai-rounded-lg chai-shadow-lg">
+  Move mouse on me 
+</div>
+```
+
+> 👉 The card tilts dynamically based on cursor position.
+
+---
+
+## 💡 Example
+
+```html
+<div class="
+  chai-card 
+  chai-bg-blue 
+  chai-text-white 
+  chai-p-4 
+  chai-rounded-lg 
+  chai-shadow-lg 
+  chai-hover-scale
+">
+  Hover me 
+</div>
+```
+
+---
+
+
+## 📄 License
+
+MIT © 2026 Mohammad Saif
